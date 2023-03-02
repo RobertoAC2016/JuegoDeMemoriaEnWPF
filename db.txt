@@ -1,0 +1,14 @@
+[
+{"name":"0.png","indice":0},
+{"name":"1.png","indice":1},
+{"name":"2.png","indice":2},
+{"name":"3.png","indice":3},
+{"name":"4.png","indice":4},
+{"name":"5.png","indice":5},
+{"name":"6.png","indice":6},
+{"name":"7.png","indice":7},
+{"name":"8.png","indice":8},
+{"name":"9.png","indice":9},
+{"name":"10.png","indice":10},
+{"name":"11.png","indice":11},
+]

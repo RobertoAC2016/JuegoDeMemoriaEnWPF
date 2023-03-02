@@ -1,0 +1,34 @@
+﻿<Window x:Class="WPFMemorama.ImagesWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFMemorama"
+        mc:Ignorable="d"
+        Title="Agregar o borrar imagenes" Height="620" Width="400" 
+        WindowStartupLocation="CenterScreen" Loaded="Window_Loaded" Icon="/play.png">
+    <StackPanel>
+        <Button Content="Agregar nueva imagen" FontWeight="Bold" FontSize="20" Margin="10"
+                Background="#FF00C5FF" x:Name="addFiles" Click="addFiles_Click"/>
+        <ListBox x:Name="lstCarrucel" ScrollViewer.VerticalScrollBarVisibility="Visible" Height="550">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="340"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Image Tag="{Binding name}" Source="{Binding impath}" Margin="10" Width="340" Height="340"
+                               Grid.Row="0" Grid.Column="0"></Image>
+                        <Image Cursor="Hand"
+                            Width="100" Height="100" HorizontalAlignment="Right" VerticalAlignment="Top" 
+                            Source="{Binding apath}" MouseDown="Image_MouseDown" Tag="{Binding indice}">
+                        </Image>
+                    </Grid>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+    </StackPanel>
+</Window>
